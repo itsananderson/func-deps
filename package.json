@@ -1,0 +1,16 @@
+{
+  "name": "func-deps",
+  "version": "0.1.0",
+  "description": "Determines a function's dependencies based on its signature or annotations",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "functional",
+    "di",
+    "ioc"
+  ],
+  "author": "Will Anderson",
+  "license": "MIT"
+}
