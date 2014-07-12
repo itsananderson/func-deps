@@ -15,5 +15,17 @@
   "license": "MIT",
   "devDependencies": {
     "mocha": "^1.20.1"
-  }
+  },
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/itsananderson/func-deps.git"
+  },
+  "bugs": {
+    "url": "https://github.com/itsananderson/func-deps/issues"
+  },
+  "homepage": "https://github.com/itsananderson/func-deps"
 }
