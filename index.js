@@ -15,9 +15,9 @@ function funcDeps(func) {
         };
     } else if (typeof func === 'function') {
         var deps;
-        // If function contains a $deps property, use that
-        if (Object.prototype.toString.call(func.$deps) === '[object Array]') {
-            deps = func.$deps;
+        // If function contains a $inject property that is an array, use it 
+        if (Object.prototype.toString.call(func.$inject) === '[object Array]') {
+            deps = func.$inject;
         } else {
             deps = [];
             fnText = func.toString().replace(STRIP_COMMENTS, '');

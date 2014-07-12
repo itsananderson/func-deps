@@ -39,13 +39,13 @@ funcDeps(['a', 'b', function(){}]);
 // => returns { deps: ['a', 'b'], func: function(){} }
 ```
 
-If no array annotation is provided, and the function has a `$deps` property that is an array, the `$deps` property is assumed to be the dependency list.
+If no array annotation is provided, and the function has a `$inject` property that is an array, the `$inject` property is assumed to be the dependency list.
 
 ```javascript
 var funcDeps = require('func-deps');
 
 function test() {};
-test.$deps = ['a', 'b'];
+test.$inject = ['a', 'b'];
 funcDeps(test);
 // => returns { deps: ['a', 'b'], func: function test(){} }
 ```
