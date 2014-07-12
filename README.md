@@ -1,4 +1,4 @@
-func-deps
+func-deps [![NPM version](https://badge.fury.io/js/func-deps.png)](http://badge.fury.io/js/func-deps) [![Builds](https://api.travis-ci.org/repositories/itsananderson/func-deps.png?branch=master)](https://travis-ci.org/itsananderson/func-deps)
 =========
 
 Determines a function's dependencies based on its signature or annotations
