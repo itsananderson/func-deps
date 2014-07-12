@@ -54,4 +54,20 @@ describe('funcDeps', function() {
             assert.equal(testDeps.func, test);
         });
     });
+    describe('called with inline annotated functions', function() {
+        it('handles functions with different args', function() {
+            function test(c, d) {}
+            test.$deps = ['a','b'];
+            var testDeps = funcDeps(test);
+            assert.deepEqual(testDeps.deps, ['a','b']);
+            assert.equal(testDeps.func, test);
+        });
+        it('handles functions with no args', function() {
+            function test() {}
+            test.$deps = ['a','b'];
+            var testDeps = funcDeps(test);
+            assert.deepEqual(testDeps.deps, ['a','b']);
+            assert.equal(testDeps.func, test);
+        });
+    });
 });
