@@ -17,7 +17,7 @@ Usage
 
 Call func-deps with a function, and it returns an object with two properties: `deps` and `func`.
 
-```
+```javascript
 var funcDeps = require('func-deps');
 
 funcDeps(function(){});
@@ -29,7 +29,9 @@ funcDeps(function(a, b){});
 
 You can also pass func-deps an array, where the first args are string dependencies, and the last arg is the function.
 
-```
+```javascript
+var funcDeps = require('func-deps');
+
 funcDeps(['a', 'b', function(c, d){}]);
 // => returns { deps: ['a', 'b'], func: function(c, d){} }
 
@@ -39,7 +41,9 @@ funcDeps(['a', 'b', function(){}]);
 
 If no array annotation is provided, and the function has a `$deps` property that is an array, the `$deps` property is assumed to be the dependency list.
 
-```
+```javascript
+var funcDeps = require('func-deps');
+
 function test() {};
 test.$deps = ['a', 'b'];
 funcDeps(test);
