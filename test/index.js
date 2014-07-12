@@ -40,14 +40,14 @@ describe('funcDeps', function() {
             assert.equal(testDeps.func, test);
         });
     });
-    describe('handles annotated functions', function() {
-        it('that have different args', function() {
+    describe('called with annotated functions', function() {
+        it('handles functions with different args', function() {
             function test(c, d) {}
             var testDeps = funcDeps(['a', 'b', test]);
             assert.deepEqual(testDeps.deps, ['a','b']);
             assert.equal(testDeps.func, test);
         });
-        it('that have no args', function() {
+        it('handles functions with no args', function() {
             function test() {}
             var testDeps = funcDeps(['a', 'b', test]);
             assert.deepEqual(testDeps.deps, ['a','b']);
